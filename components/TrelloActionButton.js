@@ -36,9 +36,7 @@ handleAddList = () => {
     const { text } = this.state;
 
     if(text) {
-        this.setState({
-            text: ""
-        });
+       
         dispatch(addList(text))
     }
 
@@ -50,9 +48,7 @@ handleAddCard = () => {
     const { text } = this.state;
 
     if(text) {
-        this.setState({
-            text: ""
-        });
+        
         dispatch(addCard(listID, text))
     }
 
