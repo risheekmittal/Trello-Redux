@@ -2,7 +2,7 @@ import React from "react";
 import TrelloCard from "./TrelloCard";
 import TrelloActionButton from "./TrelloActionButton"
 
-const TrelloList = ({title, cards}) => {
+const TrelloList = ({title, cards, listID}) => {
     console.log(cards);
     return(
         <div style={styles.container}>
@@ -10,7 +10,7 @@ const TrelloList = ({title, cards}) => {
         { cards.map(card => (
         <TrelloCard key={card.id} text={card.text}/>
         ))}
-        <TrelloActionButton list/>
+        <TrelloActionButton listID={listID} />
         </div>
     );
 }; 
@@ -20,6 +20,7 @@ const styles = {
         backgroundColor: "#dfe3e6",
         borderRadius: 3,
         width: 300,
+        height:"100%" , 
         padding: 8,
         marginRight: 8
     }
